@@ -15,6 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Montserrat:wght@400;500;600;700&family=Prosto+One&display=swap" rel="stylesheet">
     <!-- Lib -->
+    <!-- <link rel="stylesheet" href="assets/lib/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl.theme.default.min.css"> -->
+
+
+
     <link rel="stylesheet" href="assets/lib/slick/slick.css">
     <link rel="stylesheet" href="assets/lib/slick/slick-theme.css">
     <!-- Icons -->
@@ -24,7 +29,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     
     
 </head>
@@ -137,8 +142,6 @@
         </section>
 
         <section class="application">
-
-
             <div class="container">
                 <div class="application__inner">
                     <form class="application__form" method="POST">
@@ -150,7 +153,6 @@
                     </form>
                 </div>
             </div>
-
         </section>
 
         <section class="aboutus">
@@ -175,7 +177,7 @@
         <section class="license">
             <div class="container">
                 <div class="license__inner">
-                    <h3>Лицензии и сертификаты</h3>
+                    <div class="license__title">Лицензии и сертификаты</div>
                     <div class="license__content">
                         <p>Компания Crewing Planet имеет лицензию на осуществление деятельности по трудоустройству российских моряков за границей, выданную Федеральной миграционной службой РФ.</p>
 
@@ -191,6 +193,9 @@
         <div class="reviews">
             <div class="container">
                 <div class="reviews__inner">
+                    <div class="reviews__title">
+                        Отзывы
+                    </div>
                     <div class="reviews__slider">
                         <div class="reviews__slider-item">
 
@@ -204,29 +209,51 @@
         <section class="contact">
             <div class="container">
                 <div class="contact__inner">
-                    <div class="contact__adress">
-                        <div class="contact__adress-item">
+                    <div class="contact__info">
+                        <div class="contact__item">
                             <h4>Адрес</h4>
+                            
                         </div>
-                        <div class="contact__adress-item">
+                        <div class="contact__item">
                             <h4>Телефоны</h4>
+                            <ul class="contact__phone-list">
+                                <li class="contact__phone-item">
+                                    <a href="" class="contact__phone-href">
+                                        
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="contact__adress-item">
+                        <div class="contact__item">
                             <h4>Email</h4>
+                            <ul class="contact__email-list">
+                                <li class="contact__email-item">
+                                    <a href="" class="contact__email-href">
+
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="contact__adress-item">
+                        <div class="contact__item">
                             <h4>Соц. сети</h4>
+                            <ul class="contact__social-list">
+                                <li class="contact__social-item">
+                                    <a class="contact__social-link" href="" >
+
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="contact__form">
                         <form class="contact__call-back" method="POST">
-                            <label for="">
-                                <input type="text" placeholder="Ф.И.О">
+                            <label class="contact__group" for="">
+                                <input class="contact__input" type="text" placeholder="Ф.И.О">
                             </label>
-                            <label for="">
-                                <input type="text" placeholder="Телефон">
+                            <label class="contact__group" for="">
+                                <input class="contact__input" type="text" placeholder="Телефон">
                             </label>
-                            <label for="">
+                            <label class="contact__group" for="">
                                 <textarea name="" id="" cols="30" rows="10"></textarea>
                             </label>
                         </form>
@@ -240,9 +267,7 @@
         <section class="flags">
             <div class="container">
                 <div class="flags__inner">
-                    <h5>Страны с которыми работаем:</h5>
-                    
-
+                    <div class="flags__title">Страны с которыми работаем:</div>
                     <div class="flag__slider">
                         <div class="flag__slider-item">
                             <img src="./img/flags/ru.png" alt="Russia">
@@ -278,7 +303,6 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
 
             <div class="container">
@@ -352,6 +376,7 @@
 
     <!-- Scripts -->
     <script src="./assets/lib/mask/jquery.mask.min.js"></script>
+    <!-- <script src="./assets/lib/owlcarousel/owl.carousel.min.js "></script> -->
     <script src="./assets/lib/slick/slick.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
@@ -360,16 +385,19 @@
         let date = new Date();
         document.querySelector('#nowYear').innerHTML = date.getFullYear();
 
-
-        $('.flag__slider').slick({
-            centerMode: true,
-            // autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 6,
-            slidesToScroll: 6
+        $(document).ready( function() {
+            $('.flag__slider').slick({
+                infinite: true,
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: false,
+                speed: 1000,
+                autoplay: true,
+                autoplaySpeed: 1000,
+            });
         });
+
     </script>
 
 </body>
