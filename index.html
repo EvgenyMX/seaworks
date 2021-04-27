@@ -82,6 +82,9 @@
                     
 
                     <form class="call-back__form" method="POST">
+                        <div class="title-form">
+                            Оставьте ваши контакты и мы перезовним через 3 минуты!
+                        </div>
                         <label for="persone-name">
                             <input class="input-form"type="text" name="first-name" placeholder="Имя" id="persone-name" required>
                         </label>
@@ -98,6 +101,7 @@
                                 <option value="position-5">Загран. командировки</option>
                             </select>
                         </label>
+                        <input type="hidden" name="check-bot" id="check-bot__call-back">
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
@@ -120,21 +124,11 @@
                     </div>
                     
                     <div class="services__content-group">
-                        <div class="services__content">
-                            <div class="services__text">TEXT 1</div>
-                        </div>
-                        <div class="services__content">
-                            <div class="services__text">TEXT 2</div>
-                        </div>
-                        <div class="services__content">
-                            <div class="services__text">TEXT 3</div>
-                        </div>
-                        <div class="services__content">
-                            <div class="services__text">TEXT 4</div>
-                        </div>
-                        <div class="services__content">
-                            <div class="services__text">TEXT 5</div>
-                        </div>
+                        <div class="services__content">TEXT 1</div>
+                        <div class="services__content">TEXT 2</div>
+                        <div class="services__content">TEXT 3</div>
+                        <div class="services__content">TEXT 4</div>
+                        <div class="services__content">TEXT 5</div>
                     </div>
                 </div>
             </div>
@@ -147,9 +141,11 @@
                     <form class="application__form" method="POST">
 
                         <label for="persone-phone">
-
+                            
                         </label>
-                        <button type="submit">Отправить</button>
+
+                        <input type="hidden" name="check-bot" id="check-bot__application">
+                        <button type="submit" class="application__submit">Отправить анкету</button>
                     </form>
                 </div>
             </div>
@@ -177,7 +173,9 @@
         <section class="license">
             <div class="container">
                 <div class="license__inner">
-                    <div class="license__title">Лицензии и сертификаты</div>
+                    <div class="license__title">
+                       <h3>Лицензии и сертификаты</h3>
+                    </div>
                     <div class="license__content">
                         <p>Компания Crewing Planet имеет лицензию на осуществление деятельности по трудоустройству российских моряков за границей, выданную Федеральной миграционной службой РФ.</p>
 
@@ -194,7 +192,7 @@
             <div class="container">
                 <div class="reviews__inner">
                     <div class="reviews__title">
-                        Отзывы
+                        <h3>Отзывы</h3>
                     </div>
                     <div class="reviews__slider">
                         <div class="reviews__slider-item">
@@ -211,35 +209,70 @@
                 <div class="contact__inner">
                     <div class="contact__info">
                         <div class="contact__item">
-                            <h4>Адрес</h4>
-                            
+                            <h4><i class="fas fa-home"></i>Адрес</h4>
+                            <p>198168, Санкт-Петербург, Ленинский проспект, дом 15</p>
                         </div>
                         <div class="contact__item">
-                            <h4>Телефоны</h4>
+                            <h4><i class="fas fa-mobile-alt"></i>Телефоны</h4>
                             <ul class="contact__phone-list">
                                 <li class="contact__phone-item">
-                                    <a href="" class="contact__phone-href">
-                                        
+                                    <a class="contact__phone-href" href="tel:+7 (900) 000-00-00">
+                                        +7 (900) 000-00-00 
                                     </a>
+                                    | Отдел 1
+                                </li>
+                                <li class="contact__phone-item">
+                                    <a class="contact__phone-href" href="tel:+7 (900) 000-00-00">
+                                        +7 (900) 000-00-00
+                                    </a>
+                                    | Отдел 2
+                                </li>
+                                <li class="contact__phone-item">
+                                    <a class="contact__phone-href" href="tel:+7 (900) 000-00-00">
+                                        +7 (900) 000-00-00
+                                    </a>
+                                    | Отдел 3
                                 </li>
                             </ul>
                         </div>
                         <div class="contact__item">
-                            <h4>Email</h4>
+                            <h4><i class="far fa-envelope"></i>Email</h4>
                             <ul class="contact__email-list">
                                 <li class="contact__email-item">
-                                    <a href="" class="contact__email-href">
-
+                                    <a class="contact__email-href" href="mailto:work@crewingplanet.ru">
+                                        work@crewingplanet.ru
                                     </a>
+                                    | для Анкет
+                                </li>
+                                <li class="contact__email-item">
+                                    <a class="contact__email-href" href="mailto:media@crewingplanet.ru">
+                                        media@crewingplanet.ru
+                                    </a>
+                                    | для Сотрудничества
                                 </li>
                             </ul>
                         </div>
                         <div class="contact__item">
-                            <h4>Соц. сети</h4>
+                            <h4><i class="fas fa-users"></i>Соц. сети</h4>
                             <ul class="contact__social-list">
                                 <li class="contact__social-item">
                                     <a class="contact__social-link" href="" >
-
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li class="contact__social-item">
+                                    <a class="contact__social-link" href="" >
+                                        <i class="fab fa-vk"></i>
+                                    </a>
+                                </li>
+                                <li class="contact__social-item">
+                                    <a class="contact__social-link" href="" >
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="contact__social-item">
+                                    <a class="contact__social-link" href="" >
+                                        <i class="fab fa-facebook-square"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -248,14 +281,16 @@
                     <div class="contact__form">
                         <form class="contact__call-back" method="POST">
                             <label class="contact__group" for="">
-                                <input class="contact__input" type="text" placeholder="Ф.И.О">
+                                <input class="contact__input" type="text" placeholder="Full name">
                             </label>
                             <label class="contact__group" for="">
-                                <input class="contact__input" type="text" placeholder="Телефон">
+                                <input class="contact__input" type="text" placeholder="Phone" data-mask="+0 (000) 000-00-00">
                             </label>
                             <label class="contact__group" for="">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <textarea class="contact__textarea" name="" id="" cols="30" rows="3" placeholder="Message"></textarea>
                             </label>
+                            <input type="hidden" name="check-bot__contact">
+                            <button class="contact__submit" type="submit">Отправить сообщение</button>
                         </form>
                     </div>
                 </div>
