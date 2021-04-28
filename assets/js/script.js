@@ -32,3 +32,60 @@ const servicesTab = () => {
     });
 };
 servicesTab();
+
+
+
+window.onscroll = function() { fixedHeader() };
+
+function fixedHeader() {
+
+
+    var header = document.querySelector(".header");
+
+    // console.log(window.pageYOffset);
+
+    var sticky = header.offsetTop;
+
+    if (window.pageYOffset > 100) {
+        header.style = "position: fixed";
+        header.style = "position: fixed";
+    } else {
+        header.style = "position: absolute";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let inputs = document.querySelectorAll('.input__file');
+Array.prototype.forEach.call(inputs, function (input) {
+    let label = input.nextElementSibling,
+    labelVal = label.querySelector('.input__file-button-text').innerText;
+
+    input.addEventListener('change', function() {
+    let countFiles = '';
+
+    console.log(this.files[0].name);
+
+    if (this.files && this.files.length >= 1)
+        countFiles = this.files.length;
+    
+    if (countFiles)
+        label.querySelector('.input__file-button-text').innerText = this.files[0].name;
+    else
+        label.querySelector('.input__file-button-text').innerText = labelVal;
+    });
+});
