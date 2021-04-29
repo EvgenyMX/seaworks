@@ -237,41 +237,86 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 3rem;
 }
 
 .head-section__title {
+  max-width: 850px;
+  padding: 0 15px;
   color: #fff;
 }
 
 .head-section__title h1 {
-  margin-top: 10%;
   font-size: 32px;
 }
 
+.head-section__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .call-back__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  -webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6) inset;
-          box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6) inset;
-  padding: 30px 20px 50px;
+  -webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.8) inset;
+          box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.8) inset;
+  padding: 40px 20px;
+  border-radius: 5px;
+}
+
+.call-back__form .call-back__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.call-back__form .call-back__group label {
+  margin-bottom: 10px;
+}
+
+.call-back__form .call-back__group label:last-child {
+  margin-bottom: 0;
 }
 
 .call-back__form .title-form {
   color: #fff;
-  padding: 0 0 20px;
+  padding: 0 15px 20px;
   text-align: center;
   font-size: 20px;
+  min-width: 320px;
+  max-width: 350px;
 }
 
 .call-back__form .input-form {
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -369,6 +414,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6) inset;
+          box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6) inset;
+  padding: 30px 20px;
+}
+
+.application__form .title-form {
+  color: #fff;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .application__submit {
@@ -396,9 +458,7 @@ body {
 }
 
 .input__file-icon-wrapper {
-  height: 60px;
-  width: 60px;
-  margin-right: 15px;
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,9 +486,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 100%;
-  max-width: 290px;
-  height: 60px;
   margin: 0 auto;
   padding: 8px 8px;
   background: #1bbc9b;
@@ -613,7 +670,8 @@ body {
 }
 
 .footer {
-  background: #B5B5B7;
+  background: #2c2c2c;
+  color: #fff;
 }
 
 .footer__inner {
@@ -643,10 +701,34 @@ body {
 
 .footer__item h3 {
   font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer__item a {
+  color: #fff;
+}
+
+.footer__item a:hover {
+  color: #a0a0a0;
+}
+
+.footer__logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  margin-bottom: 10px;
 }
 
 .footer__logo-img {
   width: 150px;
+  margin: 0 auto;
 }
 
 .footer__menu {

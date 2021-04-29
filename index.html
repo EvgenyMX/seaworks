@@ -8,8 +8,8 @@
 
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>BauText Design</title>
-    <meta name="description" content="The HTML5 Herald">
+    <title>Crewing Planet - Морское кадровое агенство</title>
+    <meta name="description" content="Трудоустройство на морские должности">
     <link rel="canonical" href="/">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -75,35 +75,42 @@
             <div class="container">
                 <div class="head-section__inner">
                     <div class="head-section__title">
-                        <h1>Трудоустройство на морские и речные судна.</h1>
-                        <span>Помощь в оформлении документов</span>
+                        <h1>Трудоустройство на морские и речные судна</h1>
+                        <span>Помощь в оформлении документов Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ullam officia labore accusantium alias ad. Ducimus repellat illo doloribus labore illum tempore in, dolor porro nobis repudiandae reprehenderit voluptate adipisci?</span>
                     </div>
                     
                     
+                    <div class="head-section__action">
+                        <form class="call-back__form" method="POST">
+                            <div class="title-form">Оставьте ваши контакты и мы перезовним через 3 минуты!</div>
+                            <div class="call-back__group">
+                                <label for="persone-name">
+                                    <input class="input-form" type="text" name="first-name" placeholder="Имя" id="persone-name" required>
+                                </label>
+                                <label for="persone-phone">
+                                    <input class="input-form"type="text" name="first-name" placeholder="+ 0 (000) 000-00-00" id="persone-phone" required data-mask="+ 0 (000) 000-00-00">
+                                </label>
+                                <label for="persone-position">
+                                    <select class="input-form" name="position" id="persone-position">
+                                        <option value="position-1">Трудоустройство</option>
+                                        <option value="position-2">Оформление визы</option>
+                                        <option value="position-3">Удостоверение личности моряка</option>
+                                        <option value="position-4">Мед. комиссия</option>
+                                        <option value="position-5">Загран. командировки</option>
+                                    </select>
+                                </label>
+                                <input type="hidden" name="check-bot" id="check-bot__call-back">
+                                <button type="submit">Отправить</button>
+                            </div>
+                            
 
-                    <form class="call-back__form" method="POST">
-                        <div class="title-form">
-                            Оставьте ваши контакты и мы перезовним через 3 минуты!
-                        </div>
-                        <label for="persone-name">
-                            <input class="input-form"type="text" name="first-name" placeholder="Имя" id="persone-name" required>
-                        </label>
-                        <label for="persone-phone">
-                            <input class="input-form"type="text" name="first-name" placeholder="Телефон" id="persone-phone" required data-mask="+0(000)000-00-00">
-                        </label>
-                        <label for="persone-position">
-        
-                            <select class="input-form" name="position" id="persone-position">
-                                <option value="position-1">Трудоустройство</option>
-                                <option value="position-2">Оформление визы</option>
-                                <option value="position-3">Удостоверение личности моряка</option>
-                                <option value="position-4">Мед. комиссия</option>
-                                <option value="position-5">Загран. командировки</option>
-                            </select>
-                        </label>
-                        <input type="hidden" name="check-bot" id="check-bot__call-back">
-                        <button type="submit">Отправить</button>
-                    </form>
+                        </form>
+                    </div>
+                    
+
+
+
+
                 </div>
             </div>
             
@@ -139,12 +146,15 @@
             <div class="container">
                 <div class="application__inner">
                     <form class="application__form" method="POST">
-
-
+                        <div class="title-form">
+                            Уже заполнена анкета? Отправьте ее на рассмотрение
+                        </div>
                         <div class="input__wrapper">
                             <input name="file" type="file" name="file" id="input__file" class="input input__file">
                             <label for="input__file" class="input__file-button">
-                               <span class="input__file-icon-wrapper"><i class="fas fa-file-import"></i></span>
+                                <span class="input__file-icon-wrapper">
+                                   <i class="fas fa-file-import"></i>
+                                </span>
                                <span class="input__file-button-text">Выберите файл</span>
                             </label>
                          </div>
@@ -342,7 +352,6 @@
             </div>
         </section>
         <footer class="footer">
-
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__column">
@@ -392,10 +401,17 @@
                     </div>
                     <div class="footer__column">
                         <div class="footer__item">
-                            <a href="">Карта сайта</a>
-                        </div>
-                        <div class="footer__item">
-                            Политика конфиденциальности
+                            <h3>Поддержка</h3>
+                            <nav class="footer__service">
+                                <ul class="footer__service-list">
+                                    <li class="footer__service-item">
+                                        <a class="footer__service-link" href="">Карта сайта</a>
+                                    </li>
+                                    <li class="footer__service-item">
+                                        <a class="footer__service-link" href="">Политика конфиденциальности</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                         
                     </div>
