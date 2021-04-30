@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,9 +40,7 @@
             <div class="container">
                 <div class="header__inner">
                     <div class="header__logo">
-                        <a class="logo-link" href="">
-                            Crewing Planet
-                        </a>
+                        <a class="logo-link" href="/">Crewing Planet</a>
                         <span>Морское кадровое агенство</span>
                     </div>
                     <div class="header__nav">
@@ -82,9 +80,8 @@
                         <span>Помощь в оформлении документов Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ullam officia labore accusantium alias ad. Ducimus repellat illo doloribus labore illum tempore in, dolor porro nobis repudiandae reprehenderit voluptate adipisci?</span>
                     </div>
                     
-                    
                     <div class="head-section__action">
-                        <form class="call-back__form" method="POST">
+                        <!-- <form class="call-back__form" method="POST">
                             <div class="title-form">Оставьте ваши контакты и мы перезовним через 3 минуты!</div>
                             <div class="call-back__group">
                                 <label for="persone-name">
@@ -105,21 +102,41 @@
                                 <input type="hidden" name="check-bot" id="check-bot__call-back">
                                 <button type="submit">Отправить</button>
                             </div>
+                        </form> -->
+
+                        <form class="application__form" method="POST">
+                            <div class="title-form">
+                                Уже заполнена анкета? Отправьте ее на рассмотрение
+                            </div>
+                            <div class="input__wrapper">
+                                <input name="file" type="file" name="file" id="input__file" class="input input__file">
+                                <label for="input__file" class="input__file-button">
+                                    <span class="input__file-icon-wrapper">
+                                       <i class="fas fa-file-import"></i>
+                                    </span>
+                                   <span class="input__file-button-text">Выберите файл</span>
+                                </label>
+                                <button type="submit" class="application__submit">Отправить анкету</button>
+                             </div>
+                             <span>* пример названия файла</span>
+                             <span>Петр Иванов - Матрос.doc</span>
                             
-
                         </form>
+
                     </div>
-                    
-
-
-
-
                 </div>
             </div>
-            
-
         </section>
 
+        <script>
+            let fileInput = document.querySelector('.input__file-button');
+            let btnInput = document.querySelector('.application__submit');
+
+            btnInput.style.height = fileInput.clientHeight + 'px';
+
+            console.dir( btnInput );
+
+        </script>
         
         <section class="services">
 
@@ -145,7 +162,7 @@
 
         </section>
 
-        <section class="application">
+        <!-- <section class="application">
             <div class="container">
                 <div class="application__inner">
                     <form class="application__form" method="POST">
@@ -165,7 +182,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="aboutus" id="aboutus">
             <div class="container">
@@ -211,8 +228,56 @@
                         <h3>Отзывы</h3>
                     </div>
                     <div class="reviews__slider">
-                        <div class="reviews__slider-item">
-
+                        <div class="review__item">
+                            <div class="review__item-title">Иван Петров</div>
+                            <div class="review__item-text" style="font-size: 10px;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                            </div>
+                            <div class="review__item-info">
+                                <span>Санкт-Петербрг -> Литва</span>
+                                <span>Повар</span>
+                            </div>
+                        </div>
+                        <div class="review__item">
+                            <div class="review__item-title">Иван Петров</div>
+                            <div class="review__item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                            </div>
+                            <div class="review__item-info">
+                                <span>Санкт-Петербрг -> Литва</span>
+                                <span>Повар</span>
+                            </div>
+                        </div>
+                        <div class="review__item">
+                            <div class="review__item-title">Иван Петров</div>
+                            <div class="review__item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                            </div>
+                            <div class="review__item-info">
+                                <span>Санкт-Петербрг -> Литва</span>
+                                <span>Повар</span>
+                            </div>
+                        </div>
+                        <div class="review__item">
+                            <div class="review__item-title">Иван Петров</div>
+                            <div class="review__item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                            </div>
+                            <div class="review__item-info">
+                                <span>Санкт-Петербрг -> Литва</span>
+                                <span>Повар</span>
+                            </div>
+                        </div>
+                        <div class="review__item">
+                            <div class="review__item-title">Иван Петров</div>
+                            <div class="review__item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
+                            </div>
+                            <div class="review__item-info">
+                                <span>Санкт-Петербрг -> Литва</span>
+                                <span>Повар</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,9 +430,10 @@
                 <div class="footer__inner">
                     <div class="footer__column">
                         <div class="footer__item">
-                            <a class="footer__logo-link" href="/">
-                                <img class="footer__logo-img" src="./img/main-logo.png" alt="logo">
-                            </a>
+                            <div class="footer__logo">
+                                <a class="logo-link" href="/">Crewing Planet</a>
+                                <span>Морское кадровое агенство</span>
+                            </div>
                         </div>
                         <div class="footer__item">
                             Все права защещены
@@ -458,6 +524,18 @@
                 speed: 1000,
                 autoplay: true,
                 autoplaySpeed: 1000,
+            });
+        });
+        $(document).ready( function() {
+            $('.reviews__slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                speed: 1000,
+                easing: 'linear',
+                centerMode: true,
             });
         });
 
