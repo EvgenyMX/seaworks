@@ -9,8 +9,8 @@ const servicesTab = () => {
         tabs[num].classList.add('services__tab--active');
         contents[num].classList.add('services__content--active');
     };
-
     showContent(0);
+
     const hideContent = () => {
         tabs.forEach( el => {
             el.classList.remove('services__tab--active');
@@ -19,6 +19,7 @@ const servicesTab = () => {
             el.classList.remove('services__content--active');
         });
     };
+    
     tabGroup.addEventListener('click', e => {
         let target = e.target;
         if ( target && target.classList.contains('services__tab') ) {
