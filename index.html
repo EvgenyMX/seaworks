@@ -204,7 +204,7 @@
                     <div class="reviews__slider">
                         <div class="review__item">
                             <div class="review__item-title">Иван Петров</div>
-                            <div class="review__item-text" style="font-size: 10px;">
+                            <div class="review__item-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non incidunt amet soluta magnam aut voluptatibus obcaecati, nesciunt molestiae delectus alias sed animi at sint magni voluptatum minus ipsam quisquam? 
                             </div>
@@ -338,7 +338,7 @@
                             </div>
                         </div>
                         <div class="contact__form">
-                            <form class="contact__call-back" method="POST">
+                            <form class="contact__question-form" method="POST">
                                 <label class="contact__group" for="">
                                     <input class="contact__input" type="text" placeholder="Full name">
                                 </label>
@@ -346,7 +346,7 @@
                                     <input class="contact__input" type="text" placeholder="Phone" data-mask="+0 (000) 000-00-00">
                                 </label>
                                 <label class="contact__group" for="">
-                                    <textarea class="contact__textarea" name="" id="" cols="30" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="contact__textarea" name="" id="" rows="3" placeholder="Message"></textarea>
                                 </label>
                                 <input type="hidden" name="check-bot__contact">
                                 <button class="contact__submit" type="submit">Отправить сообщение</button>
@@ -521,6 +521,7 @@
                             centerMode: false,
                             fade: true,
                             cssEase: 'linear',
+                            speed: 500,
                             // adaptiveHeight: true
                         }
                     }
