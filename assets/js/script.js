@@ -34,23 +34,14 @@ const servicesTab = () => {
 servicesTab();
 
 
-
-window.onscroll = function() { fixedHeader() };
+window.onscroll = function() { fixedHeader(); };
 
 function fixedHeader() {
-
-
     var header = document.querySelector(".header");
-
-    // console.log(window.pageYOffset);
-
-    var sticky = header.offsetTop;
-
     if (window.pageYOffset > 100) {
-        header.style = "position: fixed";
-        header.style = "position: fixed";
+        header.style.cssText = "position: fixed; animation: anim 1s forwards;";
     } else {
-        header.style = "position: absolute";
+        header.style.cssText = "position: absolute;";
     }
 }
 
@@ -60,32 +51,60 @@ function fixedHeader() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 let inputs = document.querySelectorAll('.input__file');
 Array.prototype.forEach.call(inputs, function (input) {
+
+
+    let submit = document.querySelector('.application__submit');
     let label = input.nextElementSibling,
     labelVal = label.querySelector('.input__file-button-text').innerText;
 
     input.addEventListener('change', function() {
-    let countFiles = '';
+        let countFiles = '';
+        let fileName = '';
+        
 
-    console.log(this.files[0].name);
+        if ( this.files[0] ) {
+            fileName = this.files[0].name;
+        }
+        if (this.files && this.files.length >= 1) {
+            countFiles = this.files.length;
+        }
 
-    if (this.files && this.files.length >= 1)
-        countFiles = this.files.length;
-    
-    if (countFiles)
-        label.querySelector('.input__file-button-text').innerText = this.files[0].name;
-    else
-        label.querySelector('.input__file-button-text').innerText = labelVal;
+        if ( fileName.length == 0) {
+            submit.style.display = 'none';
+        }
+
+        if ( countFiles ) {
+            if (fileName.length > 15){
+                label.querySelector('.input__file-button-text').innerText = fileName.substring(0, 10) + '... ' + fileName.substr( fileName.indexOf('.') );
+            } else {
+                label.querySelector('.input__file-button-text').innerText = this.files[0].name;
+            }
+            submit.style.display = 'block';
+
+        } else {
+            label.querySelector('.input__file-button-text').innerText = labelVal;
+        }
+        
     });
 });
+
+
+function application() {
+    const file = document.querySelector('#input__file'),
+           
+            form = document.querySelector('.application__form');
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                if ( file.files.length == 0 ) {
+                    document.querySelector('.input__file-button').style.cssText = `border: 1px solid red; `;
+                } else {
+                    
+                }
+
+            });
+}
+application();
