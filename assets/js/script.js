@@ -105,3 +105,33 @@ function application() {
             });
 }
 application();
+
+
+
+
+function mobileBar() {
+
+    const buttonBurger = document.querySelector('.mobile-burger');
+    const mobileNav = document.querySelector('.mobile__nav');
+
+    const menu = document.querySelector('.mobile__nav-list');
+
+    buttonBurger.addEventListener('click', e => {
+        if ( mobileNav.style.bottom == '-500%' ) {
+            mobileNav.style.cssText = 'bottom: 50px';
+        } else {
+            mobileNav.style.cssText = 'bottom: -500%';
+        }
+    });
+
+    menu.addEventListener('click', e => {
+        const target = e.target;
+
+        if ( target.classList.contains('mobile__nav-link')  ) {
+            mobileNav.style.cssText = 'bottom: -500%';
+        }
+    });
+
+
+}
+mobileBar();
