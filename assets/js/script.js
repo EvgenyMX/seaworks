@@ -47,11 +47,6 @@ function fixedHeader() {
 }
 
 
-
-
-
-
-
 let inputs = document.querySelectorAll('.input__file');
 Array.prototype.forEach.call(inputs, function (input) {
 
@@ -78,7 +73,8 @@ Array.prototype.forEach.call(inputs, function (input) {
 
         if ( countFiles ) {
             if (fileName.length > 15){
-                label.querySelector('.input__file-button-text').innerText = fileName.substring(0, 10) + '... ' + fileName.substr( fileName.indexOf('.') );
+                label.querySelector('.input__file-button-text').innerText = 
+                    fileName.substring(0, 10) + '... ' + fileName.substr( fileName.indexOf('.') );
             } else {
                 label.querySelector('.input__file-button-text').innerText = this.files[0].name;
             }

@@ -101,7 +101,7 @@
             </div>
         </section>
         
-        <!-- <section class="services">
+        <section class="services">
 
             <div class="container">
                 <div class="services__inner">
@@ -126,7 +126,7 @@
                 </div>
             </div>
 
-        </section> -->
+        </section>
 
 
         <section class="callback">
@@ -498,6 +498,22 @@
                 speed: 1000,
                 autoplay: true,
                 autoplaySpeed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 575.98,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            fade: true,
+                            cssEase: 'linear',
+                            speed: 500,
+                            // adaptiveHeight: true
+                        }
+                    }
+                ]
+
+
             });
         });
         $(document).ready( function() {
@@ -522,7 +538,6 @@
                             fade: true,
                             cssEase: 'linear',
                             speed: 500,
-                            // adaptiveHeight: true
                         }
                     }
                 ]
