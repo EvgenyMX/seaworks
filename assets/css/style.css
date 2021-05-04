@@ -1361,10 +1361,12 @@ body {
 
   .mobile-bar .fa-envelope {
     font-size: 30px;
+    color: #000;
   }
 
   .mobile-bar .fa-phone {
     font-size: 26px;
+    color: #000;
   }
 
   .mobile-bar .fa-whatsapp {
@@ -1379,6 +1381,8 @@ body {
     background: #fff;
     width: 100%;
     padding: 10px 30px;
+    -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6);
+            box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6);
   }
 
   .mobile-bar .mobile__nav-item {
