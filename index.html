@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon"> -->
-
-
+    <link rel="shortcut icon" href="./img/favicon/favicon-16x16.png" type="image/png">
     <meta name="robots" content="noindex, nofollow" />
-
     <title>Crewing Planet - Морское кадровое агенство</title>
     <meta name="description" content="Трудоустройство на морские должности">
     <link rel="canonical" href="/">
@@ -15,11 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Montserrat:wght@400;500;600;700&family=Prosto+One&display=swap" rel="stylesheet">
     <!-- Lib -->
-    <!-- <link rel="stylesheet" href="assets/lib/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/lib/owlcarousel/owl.theme.default.min.css"> -->
-
-
-
     <link rel="stylesheet" href="assets/lib/slick/slick.css">
     <link rel="stylesheet" href="assets/lib/slick/slick-theme.css">
     <!-- Icons -->
@@ -29,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     
     
 </head>
@@ -83,13 +75,17 @@
                                 Прием заполненых анкет <br>  Отправьте ее на рассмотрение
                             </div>
                             <div class="input__wrapper">
-                                <input name="file" type="file" name="file" id="input__file" class="input input__file">
+                                <input  id="input__file" class="input input__file"
+                                    type="file" 
+                                    name="file"
+                                    accept=".pdf, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                                 <label for="input__file" class="input__file-button">
                                     <span class="input__file-icon-wrapper">
                                        <i class="fas fa-file-import"></i>
                                     </span>
-                                   <span class="input__file-button-text">Выберите файл</span>
+                                   <span class="input__file-button-text">Загрузить анкету</span>
                                 </label>
+                                <input type="hidden" id="check-bot-file">
                                 <button type="submit" class="application__submit">Отправить анкету</button>
                              </div>
                              <span>* пример названия файла</span>
@@ -100,7 +96,6 @@
             </div>
         </section>
         <section class="services">
-
             <div class="container">
                 <div class="services__inner">
                     <div class="services__tab-group">
@@ -132,22 +127,33 @@
                         <div class="title-form">Оставьте ваши контакты и мы перезовним через 3 минуты!</div>
                         <div class="call-back__group">
                             <label for="persone-name">
-                                <input class="input-form" type="text" name="first-name" placeholder="Имя" id="persone-name" required>
+                                <input class="input-form" 
+                                type="text" 
+                                name="first-name" 
+                                placeholder="Имя" 
+                                id="persone-name"
+                                required>
                             </label>
                             <label for="persone-phone">
-                                <input class="input-form" type="text" name="first-name" placeholder="+ 0 (000) 000-00-00" id="persone-phone" required data-mask="+ 0 (000) 000-00-00">
+                                <input class="input-form" 
+                                type="text" 
+                                name="phone" 
+                                placeholder="+ 0 (000) 000-00-00" 
+                                id="persone-phone" 
+                                data-mask="+ 0 (000) 000-00-00"
+                                required>
                             </label>
                             <label for="persone-position">
                                 <select name="position" id="persone-position">
-                                    <option value="position-1">Трудоустройство</option>
-                                    <option value="position-2">Оформление визы</option>
-                                    <option value="position-3">Удостоверение личности моряка</option>
-                                    <option value="position-4">Мед. комиссия</option>
-                                    <option value="position-5">Загран. командировки</option>
+                                    <option>Трудоустройство</option>
+                                    <option>Оформление визы</option>
+                                    <option>Удостоверение личности моряка</option>
+                                    <option>Мед. комиссия</option>
+                                    <option>Загран. командировки</option>
                                 </select>
                             </label>
                             <input type="hidden" name="check-bot" id="check-bot__call-back">
-                            <button type="submit">Отправить</button>
+                            <button type="submit" class="call-back__submit">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -157,17 +163,11 @@
             <div class="container">
                 <div class="aboutus__inner">
                     <h3>О компании</h3>
-                    
                     <div class="aboutus__content">
                         <p>Основное направление нашей деятельности - трудоустройство российских моряков на суда под иностранным флагом. Подать анкету и просмотреть список открытых вакансий можно тут.</p>
-
                         <p>Также наша компания оказывает широкий спектр услуг не только морским специалистам, но и всем заинтересованным лицам. Подробнее вы можете узнать в разделе Наши услуги.</p>
-                     
                         <p>В нашей компании работают молодые, энергичные и любезные специалисты, которые всегда готовы дать вам ответ на любой вопрос.</p>
                     </div>
-
-
-                    
                 </div>
             </div>
         </section>
@@ -186,7 +186,7 @@
             </div>
         </section> -->
 
-        <div class="reviews" id="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <div class="reviews__inner">
                     <div class="reviews__title">
@@ -247,7 +247,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <section class="contact" id="contact">
             <div class="container">
                 <div class="contact__inner">
@@ -329,15 +329,34 @@
                         <div class="contact__form">
                             <form class="contact__question-form" method="POST">
                                 <label class="contact__group" for="">
-                                    <input class="contact__input" type="text" placeholder="Full name">
+                                    <input class="contact__input" 
+                                            type="text" 
+                                            placeholder="Full name *" 
+                                            name="mesName">
                                 </label>
                                 <label class="contact__group" for="">
-                                    <input class="contact__input" type="text" placeholder="Phone" data-mask="+0 (000) 000-00-00">
+                                    <input class="contact__input" 
+                                            type="text" 
+                                            placeholder="Phone" 
+                                            data-mask="+0 (000) 000-00-00" 
+                                            name="mesPhone">
                                 </label>
                                 <label class="contact__group" for="">
-                                    <textarea class="contact__textarea" name="" id="" rows="3" placeholder="Message"></textarea>
+                                    <input class="contact__input" 
+                                            type="text" 
+                                            placeholder="Email *" 
+                                            name="mesMail">
                                 </label>
-                                <input type="hidden" name="check-bot__contact">
+                                <label class="contact__group" for="">
+                                    <textarea class="contact__textarea" 
+                                            rows="3" 
+                                            placeholder="Message *" 
+                                            name="message"></textarea>
+                                </label>
+                                <input id="check-bot__contact"
+                                        type="hidden" 
+                                        name="check-bot__contact"
+                                        value="">
                                 <button class="contact__submit" type="submit">Отправить сообщение</button>
                             </form>
                         </div>
@@ -518,7 +537,12 @@
         </nav>
 
     </div>
-
+    <div class="success-modal">
+        <div class="modal__inner">
+            <div class="modal__title"><h3></h3></div>
+            <div class="modal__text"></div>
+        </div>
+    </div>
 
 
 
@@ -527,12 +551,12 @@
 
     <!-- Scripts -->
     <script src="./assets/lib/mask/jquery.mask.min.js"></script>
-    <!-- <script src="./assets/lib/owlcarousel/owl.carousel.min.js "></script> -->
+    <script src="./lib/anime/anime.min.js"></script>
     <script src="./assets/lib/slick/slick.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
-
     <script>
+
         let date = new Date();
         document.querySelector('#nowYear').innerHTML = date.getFullYear();
 
@@ -552,13 +576,9 @@
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2,
-                            // speed: 500,
-                            // adaptiveHeight: true
                         }
                     }
                 ]
-
-
             });
             $('.reviews__slider').slick({
                 infinite: true,
